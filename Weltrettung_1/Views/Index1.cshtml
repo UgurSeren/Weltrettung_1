@@ -1,0 +1,46 @@
+﻿@model Weltrettung_1.Models.Detail;
+@{
+ Layout = null;
+}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+ <meta name="viewport" content="width=device-width" />
+	<link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css" />
+ <title></title>
+</head>
+<body>
+
+	<h5 class="bg-primary text-white text-center m-2 p-2"></h5>
+ <form asp-action="Index3" method="post">
+		<div asp-validation-summary="All"></div>
+		<div class="form-group">
+			<label asp-for="vorname" class="form-label">Vorname:</label>
+			<input asp-for="vorname" class="form-control" />
+		</div>
+
+		<div class="form-group">
+		<label asp-for="name" class="form-label">Name:</label>
+		<input asp-for="name" class="form-control" />
+		</div>
+		<div class="form-group">
+			<label asp-for="email" class="form-label">Email:</label>
+			<input asp-for="email" class="form-control" />
+		</div>
+		<div class="form-group">
+			<label asp-for="alter" class="form-label">Email:</label>
+			<input asp-for="alter" class="form-control" />
+		</div>
+		
+		<select>
+			<option value="apple">Apple</option>
+			<option value="banana">Banana</option>
+			<option value="orange">Orange</option>
+		</select>
+		
+		<button type="submit">Hinzufügen</button>
+	</form>
+</body>
+</html>

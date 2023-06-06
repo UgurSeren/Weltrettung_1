@@ -1,0 +1,52 @@
+﻿@model Weltrettung_1.Models.Detail;
+@{
+	Layout = null;
+}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width" />
+	<link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css" />
+	<title></title>
+</head>
+<body>
+
+	
+	<form asp-action="Index1" method="post">
+		<div asp-validation-summary="All"></div>
+		<div class="form-group">
+			<label asp-for="vorname" class="form-label">Vorname:</label>
+			<input asp-for="vorname" class="form-control" />
+		</div>
+
+		<div class="form-group">
+			<label asp-for="name" class="form-label">Name:</label>
+			<input asp-for="name" class="form-control" />
+		</div>
+		<div class="form-group">
+			<label asp-for="email" class="form-label">Email:</label>
+			<input asp-for="email" class="form-control" />
+		</div>
+		
+		<div class="form-group">
+			<label asp-for="description" class="form-label">Fähigkeit:</label>
+			<input asp-for="description" class="form-control" />
+		</div>
+		<div>
+			<label asp-for="alter">Wie alt sind Sie</label>
+			<select asp-for="alter">
+				<option value="">Choose an option</option>
+				<option value="false">Unter 18</option>
+				<option value="true">großer als 18</option>
+			</select>
+
+		</div>
+
+		<button type="submit">Hinzufügen</button>
+	</form>
+</body>
+</html>
+
+<a asp-action="Index"> Hauptmenü </a>

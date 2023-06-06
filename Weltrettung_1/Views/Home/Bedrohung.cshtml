@@ -1,0 +1,57 @@
+﻿@model List<Bedroh>
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <h2></h2>
+    <table>
+        <thead>
+            <tr><th>Name</th><th>Existent</th><th>held_id</th><th>agressor_id</th></tr>
+        </thead>
+        <tbody>
+            @foreach (Bedroh r in Model!)
+            {
+                <tr>
+                    <td>@r.bedroh_name</td>
+                    <td>@r.existenz</td>
+                    <td>@r.held_id</td>
+                    <td>@r.agressor_id</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a asp-action="Index10"> Hauptmenü </a>
+

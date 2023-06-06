@@ -1,0 +1,36 @@
+﻿@model Weltrettung_1.Models.Detail
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Thanks</title>
+</head>
+<body>
+    <div>
+        <h1>Hallo, @Model?.vorname!</h1>
+        @if (Model?.alter == true)
+        {
+            @:Los geht's mit dem Spiel.
+            <a asp-action="List">
+                <h2>Helden Hier</h2>
+
+            </a>
+            <br />
+            <a asp-action="Agressor"><h2>Agressor Hier</h2></a>
+            <br />
+            <a asp-action="Bedrohung"><h2>Bedrohung Hier</h2></a>
+        }
+        else
+        {
+            @:Du kannst wegen deines Alters nicht mitspielen
+        }
+    </div>
+    Click
+    
+</body>
+</html>
+
+<a asp-action="Index"> Hauptmenü </a>

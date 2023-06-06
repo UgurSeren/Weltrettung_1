@@ -1,0 +1,31 @@
+﻿@model IEnumerable<Detail>
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <h2></h2>
+    <table>
+        <thead>
+            <tr><th>Vorname</th><th>Nachname</th><th>Email</th></tr>
+        </thead>
+        <tbody>
+            @foreach (Detail r in Model!)
+            {
+                <tr>
+                    <td>@r.vorname</td>
+                    <td>@r.name</td>
+                    <td>@r.email</td>
+                </tr>
+            }
+        </tbody>
+    </table>    
+</body>
+</html>
+
+<a asp-action="Index10"> Hauptmenü </a>
